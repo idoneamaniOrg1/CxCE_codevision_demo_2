@@ -30,7 +30,7 @@ namespace CxCE_Demo
             //cmd.CommandText = "SELECT NAME FROM Users WHERE ID = " + ID;
             // adding prepared statements to fix sqlI
             cmd.CommandText = "SELECT NAME FROM Users WHERE ID = " + @ID;
-            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@ID", ID);
             // finish prepared statement
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
