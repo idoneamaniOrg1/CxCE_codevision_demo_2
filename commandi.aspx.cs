@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using system.Web.Security.AntiXss.Sanitize()
 
 namespace CxCE_Demo
 {
@@ -12,7 +13,7 @@ namespace CxCE_Demo
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            string processtostart = Sanitizer.SanitizeInput(systemname.Text);
+            string processtostart = AntiXss.Sanitize(systemname.Text);
             Process.Start(processtostart);
         }
     }
