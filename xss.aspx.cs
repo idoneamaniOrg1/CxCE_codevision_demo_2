@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Security.AntiXss;
 
 namespace CxCE_Demo
 {
@@ -36,7 +37,7 @@ namespace CxCE_Demo
 
             reader = cmd.ExecuteReader();
             if (reader.HasRows)
-                message.Text = reader["NAME"].ToString();
+                message.Text = AntiXss.Sanitize(reader["NAME"].ToString());
 
             conn.Close();
         }
