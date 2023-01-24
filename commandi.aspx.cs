@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using system.Web.Security.AntiXss.Sanitize()
+using system.Web.Security.AntiXss.Sanitize;
 
 namespace CxCE_Demo
 {
