@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using system.Web.Security.AntiXss.Sanitize;
+
+
 
 namespace CxCE_Demo
 {
@@ -35,7 +38,7 @@ namespace CxCE_Demo
                 username = reader["NAME"].ToString();
             }
 
-            message.Text = "Welcome " + username;
+            message.Text = "Welcome " +  AntiXss.Sanitize(username);
             conn.Close();
         }
     }
