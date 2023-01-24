@@ -37,8 +37,10 @@ namespace CxCE_Demo
 
             reader = cmd.ExecuteReader();
             if (reader.HasRows)
-                message.Text = AntiXss.Sanitize(reader["NAME"].ToString());
-
+                {
+                    string cleanInput = AntiXss.Sanitize(reader["NAME"].ToString());
+                message.Text = cleanInput;
+                }
             conn.Close();
         }
 
