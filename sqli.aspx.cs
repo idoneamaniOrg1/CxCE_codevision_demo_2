@@ -26,6 +26,7 @@ namespace CxCE_Demo
             SqlConnection conn = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=" + Constants.DB_PASSWORD + ";");
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
+            //ido neamani
 
             //cmd.CommandText = "SELECT NAME FROM Users WHERE ID = " + ID;
             // adding prepared statements to fix sqlI
